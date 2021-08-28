@@ -1,0 +1,90 @@
+@import '../../global.module.scss';
+
+.link {
+
+    margin: clamp(1rem, 2.5vw, 2rem);
+    font-size: clamp(2rem, 2.5vw, 4rem);
+    font-weight: 600;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    position: relative;
+    padding: 0.5rem;
+    white-space: nowrap;
+    text-align: center;
+    transition: all .2s;
+
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 5;
+        width: 60%;
+        height: 40%;
+        opacity: 0;
+        transition: all .2s;
+    }
+
+    // bottom left
+    &::before {
+        bottom: 0rem;
+        left: -0rem; // -1
+        border-left: white solid 0.3rem;
+        border-bottom: white solid 0.3rem;
+    }
+
+    // top right
+    &::after {
+        top: -0rem; // -0.5
+        right: -0rem; // -0.5
+        border-top: white solid 0.3rem;
+        border-right: white solid 0.3rem;
+    }
+
+    &:hover {
+        color: $red-purple;
+    }
+
+    &:hover::after, &:hover::before{
+        opacity: 1;
+        width: 30%;
+        height: 20%;
+    }
+
+    // top right
+    &:hover::after {
+        top: 0;
+        right: -0rem;
+        border-top: $red-dark solid 0.3rem;
+        border-right: $red-dark solid 0.3rem;
+    }
+    
+    // bottom left
+    &:hover::before {
+        bottom: 0;
+        left: -0.5rem;
+        border-left: $red-dark solid 0.3rem;
+        border-bottom: $red-dark solid 0.3rem;
+    }
+
+    &:active {
+        animation: blink .5s infinite;
+    }
+}
+
+@keyframes blink {
+    0% {
+        color: $red-dark;
+    }
+
+    50% {
+        color: white;
+    }
+
+    100% {
+        color: $red-dark;
+    }
+}
+
+
+
+

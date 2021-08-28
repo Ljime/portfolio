@@ -1,0 +1,94 @@
+@import '../../global.module.scss';
+
+.contactContainer {
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div { // email container 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &::before { // Box
+            content: 'Copied!';
+            position: absolute;
+            bottom: -4.5rem;
+            left: calc(50%);
+            transform: translateX(-50%);
+            width: 8rem;
+            height: 4rem;
+            font-size: 1.6rem;
+            color: $red;
+            background-color: $grey;
+            opacity: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .2s;
+        }
+        
+        &::after { // Arrow
+            content: '';
+            position: absolute;
+            bottom: -.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 2rem solid transparent;
+            border-bottom-color: $grey;
+            opacity: 0;
+            transition: all .2s;
+        }
+    }
+
+    svg {
+        margin: 1rem;
+        width: 3rem;
+        height: 3rem;
+        fill: white;
+        transition: all .2s;
+        
+        &:hover {
+            fill: $red;
+        }
+    }
+
+    p {
+        font-size: clamp(1.2rem, 2vw, 2rem);
+        color: $red;
+        transition: color .2s;
+        &:hover {
+            color: $red-purple;
+        }
+    }
+
+    &:first-child {
+        margin-left: 3rem;
+    }
+
+    a {
+        width: 4rem;
+    }
+
+}
+
+.clicked::before, .clicked::after {
+    animation: fadeInOut 3s;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

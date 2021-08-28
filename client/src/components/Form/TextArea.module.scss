@@ -1,0 +1,27 @@
+@import '../../global.module.scss';
+
+.textarea {
+    font-size: clamp(1.2rem, 2vw, 3rem);
+    font-weight: 300;
+    font-family: sans-serif;
+    color: white;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: $grey;
+    border: 0.2rem solid $red-dark;
+    height: 20rem;
+    resize: none;
+    transition: all .2s;
+
+    &:focus {
+        outline: none;
+        border: 0.2rem solid $red-purple;
+        border-radius: 1rem;
+    }
+}
+
+.label {
+    font-size: clamp(1.6rem, 2.5vw, 5rem);
+    font-weight: 600;
+    color: $red
+}

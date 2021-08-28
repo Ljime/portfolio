@@ -1,0 +1,7 @@
+@import '../../global.module.scss';
+
+.terHeading {
+    font-size: clamp(2rem, 2vw, 4rem);
+    margin: 1rem;
+    color: $red;
+}

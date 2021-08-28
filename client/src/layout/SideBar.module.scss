@@ -1,0 +1,77 @@
+@import '../global.module.scss';
+
+.sidebar {
+    height: 100vh;
+    max-width: 40rem;
+    position: fixed;
+    z-index: 3;
+    right: 0;
+    background-color: $grey;
+    transition: all .2s;
+    animation: slideInRight .21s;
+
+    p:first-child {
+        margin-top: 10rem;
+    }
+}
+
+.exiting {
+    animation: slideOutRight .21s;
+}
+
+.contact {
+    flex-direction: column;
+
+    div {
+        flex-direction: column;
+
+        &::before {
+            color: $red;
+            background-color: $black;
+        }
+
+        &::after {
+            border-bottom-color: $black;
+        }
+
+        p {
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+
+    svg:first-child {
+        margin-left: 0rem;
+    }
+
+    p {
+        margin: 1rem;
+        color: white;
+        text-align: center;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutRight {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+}

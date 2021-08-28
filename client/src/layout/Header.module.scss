@@ -1,0 +1,29 @@
+@import '../global.module.scss';
+
+.header {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    min-height: 6.5rem;
+    background-color: $black;
+    min-width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    align-items: center;
+
+    :last-child {
+        margin-right: 3.25rem;
+    }
+    @media (max-width: 700px) {
+        display: none;
+    }
+}
+
+.contact {
+    @media (max-width: 1180px) {
+        p {
+            display: none;
+        }
+    }
+}
