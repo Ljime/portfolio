@@ -1,0 +1,5 @@
+.terHeading {
+  font-size: clamp(2rem, 2vw, 4rem);
+  margin: 1rem;
+  color: #c3073f;
+}

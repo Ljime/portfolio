@@ -1,0 +1,67 @@
+.sidebar {
+  height: 100vh;
+  max-width: 40rem;
+  position: fixed;
+  z-index: 3;
+  right: 0;
+  background-color: #4E4E50;
+  transition: all .2s;
+  animation: slideInRight .21s;
+}
+
+.sidebar p:first-child {
+  margin-top: 10rem;
+}
+
+.exiting {
+  animation: slideOutRight .21s;
+}
+
+.contact {
+  flex-direction: column;
+}
+
+.contact div {
+  flex-direction: column;
+}
+
+.contact div::before {
+  color: #c3073f;
+  background-color: #212121;
+}
+
+.contact div::after {
+  border-bottom-color: #212121;
+}
+
+.contact div p:hover {
+  color: #c3073f;
+}
+
+.contact p {
+  margin: 1rem;
+  color: white;
+  text-align: center;
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}

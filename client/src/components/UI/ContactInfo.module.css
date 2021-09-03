@@ -1,0 +1,85 @@
+.contactContainer {
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactContainer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.contactContainer div::before {
+  content: 'Copied!';
+  position: absolute;
+  bottom: -4.5rem;
+  left: calc(50%);
+  transform: translateX(-50%);
+  width: 8rem;
+  height: 4rem;
+  font-size: 1.6rem;
+  color: #c3073f;
+  background-color: #4E4E50;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .2s;
+}
+
+.contactContainer div::after {
+  content: '';
+  position: absolute;
+  bottom: -.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2rem solid transparent;
+  border-bottom-color: #4E4E50;
+  opacity: 0;
+  transition: all .2s;
+}
+
+.contactContainer svg {
+  margin: 1rem;
+  width: 3rem;
+  height: 3rem;
+  fill: white;
+  transition: all .2s;
+}
+
+.contactContainer svg:hover {
+  fill: #c3073f;
+}
+
+.contactContainer p {
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  color: #c3073f;
+  transition: color .2s;
+}
+
+.contactContainer p:hover {
+  color: #950740;
+}
+
+.contactContainer:first-child {
+  margin-left: 3rem;
+}
+
+.clicked::before, .clicked::after {
+  animation: fadeInOut 3s;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

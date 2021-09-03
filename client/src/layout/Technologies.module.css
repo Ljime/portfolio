@@ -1,0 +1,25 @@
+.logoContainer {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.logoContainer img {
+  margin: 5rem;
+  max-height: 20rem;
+  max-width: 20rem;
+  transition: all .2s;
+}
+
+.logoContainer img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+  .logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}

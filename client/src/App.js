@@ -7,17 +7,20 @@ import SideBar from "./layout/SideBar.js";
 import SideButton from "./layout/SideButton.js";
 import Projects from "./layout/Projects.js";
 
-
 function App() {
 
   useLayoutEffect(() => {
     const updateWidth = () => {
+      console.log(window.innerWidth <= 700)
       if(window.innerWidth <= 700) {
-        setShowSideButton(true)
+        return setShowSideButton(true)
       } else if (window.innerWidth <= 700 &&
           !(window.scrollY > headerRef.current.clientHeight)) {
-          setShowSideButton(false)
-        }
+        return setShowSideButton(false)
+      } else if (window.innerWidth > 700 &&
+          (window.scrollY <= headerRef.current.clientHeight)){
+        return setShowSideButton(false)
+      }
     }
     window.addEventListener('resize', updateWidth)
     return () => window.removeEventListener('resize', updateWidth)
@@ -37,7 +40,7 @@ function App() {
   }
 
   const onTechScroll = () => {
-    techRef.current.scrollIntoView({ block: "center", behavior: "smooth" })
+    techRef.current.scrollIntoView({ block: "start", behavior: "smooth" })
   }
 
   const onProjectScroll = () => {
@@ -52,16 +55,18 @@ function App() {
     setShowSideBar((prevValue) => !prevValue)
   }
 
-  if(!window.innerWidth <= 700) {
-    window.addEventListener('scroll', () => {
+
+  window.addEventListener('scroll', () => {
+    if(window.innerWidth > 700) {
       const scrolled = window.scrollY
+      console.log('????')
       if (scrolled > headerRef.current.clientHeight) {
         setShowSideButton(true)
       } else {
         setShowSideButton(false)
       }
-    })
-  }
+    }
+  })
 
   return (
 			<div className="App">

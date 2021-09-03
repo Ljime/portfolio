@@ -1,0 +1,76 @@
+.main {
+  overflow: hidden;
+  background: url(../assets/blackBlackground.jpg) center no-repeat;
+  font-family: 'DM Mono', monospace;
+  color: #c3073f;
+  letter-spacing: 0.2rem;
+}
+
+.main div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main div h1 {
+  font-size: clamp(2.5rem, 3.5vw, 8rem);
+  margin: 0;
+  position: relative;
+}
+
+.main div h2 {
+  position: relative;
+  font-size: clamp(1.6rem, 2.5vw, 5rem);
+}
+
+.type::before,
+.type::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.type1::before {
+  background: #212121;
+  animation: typeAnimation 1s forwards steps(21);
+}
+
+.type1::after {
+  background: white;
+  width: 0.3rem;
+  animation: typeAnimation 1s forwards steps(21), blinking 0.5s infinite;
+}
+
+.type2::before {
+  background: #212121;
+  animation: typeAnimation 1s forwards steps(35);
+}
+
+.type2::after {
+  background: white;
+  width: 0.3rem;
+  animation: typeAnimation 1s forwards steps(35), blinking 0.5s infinite;
+}
+
+@keyframes typeAnimation {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

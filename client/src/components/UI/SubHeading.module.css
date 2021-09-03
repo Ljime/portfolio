@@ -1,0 +1,6 @@
+.subheading {
+  font-size: clamp(3rem, 3.5vw, 8rem);
+  margin: 0;
+  color: #c3073f;
+  border-bottom: 0.3rem solid #c3073f;
+}

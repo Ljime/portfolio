@@ -1,0 +1,25 @@
+.textarea {
+  font-size: clamp(1.2rem, 2vw, 3rem);
+  font-weight: 300;
+  font-family: sans-serif;
+  color: white;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #4E4E50;
+  border: 0.2rem solid #6F2232;
+  height: 20rem;
+  resize: none;
+  transition: all .2s;
+}
+
+.textarea:focus {
+  outline: none;
+  border: 0.2rem solid #950740;
+  border-radius: 1rem;
+}
+
+.label {
+  font-size: clamp(1.6rem, 2.5vw, 5rem);
+  font-weight: 600;
+  color: #c3073f;
+}

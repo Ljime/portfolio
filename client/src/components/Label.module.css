@@ -1,0 +1,16 @@
+.label {
+  font-size: clamp(1.2rem, 2vw, 3rem);
+  font-weight: 600;
+  color: white;
+  background-color: #212121;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10rem;
+  transition: all .2s;
+}
+
+.label:hover {
+  transform: scale(1.05);
+  color: #c3073f !important;
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.1);
+}

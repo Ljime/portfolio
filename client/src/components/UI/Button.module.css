@@ -1,0 +1,17 @@
+.button {
+  font-size: clamp(1.6rem, 2vw, 3rem);
+  color: white;
+  padding: 1rem;
+  background-color: #c3073f;
+  border: 0.2rem solid #950740;
+  transition: all .2s;
+}
+
+.button:hover {
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
