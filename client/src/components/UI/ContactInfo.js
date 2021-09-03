@@ -19,9 +19,10 @@ const ContactInfo = (props) => {
     return (
         <div className={`${classes.contactContainer} ${props.className}`}>
             <a rel="noreferrer" href='https://ca.linkedin.com/' target='_blank'>
-              <LinkedIn />
+                <LinkedIn />
             </a>
-            <div onClick={copyTextHandler} className={clicked ? classes.clicked : ''}>
+
+            <div onClick={copyTextHandler} className={clicked ? classes.clicked : ""}>
                 <Mail />
                 <p>hermanvuongbusiness@gmail.com</p>
             </div>

@@ -64,8 +64,8 @@ const Contact = forwardRef((props,ref) => {
                         id="Message"
                     ></TextArea>
                     {loading ? <Spinner></Spinner> : <Button>Send</Button>}
-                    {success && <TerHeading>Successfully Sent!</TerHeading>}
-                    {error && <TerHeading>Error! ;c</TerHeading>}
+                    {success && <TerHeading className={classes.message}>Successfully Sent!</TerHeading>}
+                    {error && <TerHeading className={classes.message}>Error! ;c</TerHeading>}
                 </form>
             </div>
         </section>

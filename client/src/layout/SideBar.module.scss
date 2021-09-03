@@ -13,6 +13,7 @@
     p:first-child {
         margin-top: 10rem;
     }
+
 }
 
 .exiting {
@@ -21,30 +22,25 @@
 
 .contact {
     flex-direction: column;
-
+    
     div {
         flex-direction: column;
-
         &::before {
             color: $red;
             background-color: $black;
         }
-
+        
         &::after {
             border-bottom-color: $black;
         }
-
+        
         p {
             &:hover {
                 color: $red;
             }
         }
     }
-
-    svg:first-child {
-        margin-left: 0rem;
-    }
-
+    
     p {
         margin: 1rem;
         color: white;

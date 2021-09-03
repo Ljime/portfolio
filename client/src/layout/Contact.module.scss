@@ -30,11 +30,16 @@
     flex-direction: column;
     justify-content: center;
     flex: 1;
+
     button {
         margin-top: 1rem;
     }
 
-    @media only screen and (max-width: 768px) {
+    @media (max-width: 768px) {
         max-width: 60vw;
     }
+}
+
+.message {
+    margin: 1rem auto;
 }

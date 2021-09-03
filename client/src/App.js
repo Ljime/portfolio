@@ -1,7 +1,7 @@
 import Header from "./layout/Header.js";
 import Main from './layout/Main'
 import Technologies from "./layout/Technologies.js";
-import { useRef, useState } from "react"
+import { useLayoutEffect, useRef, useState } from "react"
 import Contact from "./layout/Contact.js";
 import SideBar from "./layout/SideBar.js";
 import SideButton from "./layout/SideButton.js";
@@ -9,9 +9,22 @@ import Projects from "./layout/Projects.js";
 
 
 function App() {
-  const mobile = window.innerWidth <= 700
+
+  useLayoutEffect(() => {
+    const updateWidth = () => {
+      if(window.innerWidth <= 700) {
+        setShowSideButton(true)
+      } else if (window.innerWidth <= 700 &&
+          !(window.scrollY > headerRef.current.clientHeight)) {
+          setShowSideButton(false)
+        }
+    }
+    window.addEventListener('resize', updateWidth)
+    return () => window.removeEventListener('resize', updateWidth)
+  }, [])
+
   const [showSideBar, setShowSideBar] = useState(false)
-  const [showSideButton, setShowSideButton] = useState(mobile)
+  const [showSideButton, setShowSideButton] = useState(window.innerWidth <= 700)
 
   const headerRef = useRef('')
   const mainRef = useRef('')  
@@ -39,7 +52,7 @@ function App() {
     setShowSideBar((prevValue) => !prevValue)
   }
 
-  if(!mobile) {
+  if(!window.innerWidth <= 700) {
     window.addEventListener('scroll', () => {
       const scrolled = window.scrollY
       if (scrolled > headerRef.current.clientHeight) {
@@ -66,6 +79,7 @@ function App() {
 				/>
 				<SideBar
 					in={showSideBar && showSideButton}
+          toggleSideBar={toggleSideBar}
 					onContactScroll={onContactScroll}
 					onTechScroll={onTechScroll}
 					onProjectScroll={onProjectScroll}

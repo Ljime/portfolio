@@ -37,7 +37,7 @@ const Projects = forwardRef((props, ref) => {
             />{" "}
             <Project
                 image={movies}
-                server="https://vuong-react-movies.herokuapp.com/"
+                server="https://react-movies-a0826.web.app/"
                 github="https://github.com/Ljime/react-movies"
                 labels={["React", "Context API"]}
                 title="React Movies"
