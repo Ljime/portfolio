@@ -25,7 +25,7 @@ const Projects = forwardRef((props, ref) => {
                 github="https://github.com/Ljime/charity-website"
                 labels={["React", "NodeJS", "Stripe", 'Express']}
                 title="Charity Donation Page"
-                desc='A charity website that allows the user to donate to support the fight against breast cancer. Has am interactive multi-part form and uses Stripe for payment'
+                desc='A charity website that allows the user to donate to support the fight against breast cancer. Has an interactive multi-part form and uses Stripe for payment'
             />
             <Project
                 image={restaurant}
