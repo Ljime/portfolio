@@ -1,7 +1,9 @@
 @import '../../global.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@700&family=Lora:wght@600&display=swap');
 
 .subheading {
     font-size: clamp(3rem, 3.5vw, 8rem);
+    font-family: 'Lora', serif;
     margin: 0;
     color: $red;
     border-bottom: 0.3rem solid $red;
