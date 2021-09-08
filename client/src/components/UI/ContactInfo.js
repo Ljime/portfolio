@@ -18,7 +18,7 @@ const ContactInfo = (props) => {
 
     return (
         <div className={`${classes.contactContainer} ${props.className}`}>
-            <a rel="noreferrer" href='https://ca.linkedin.com/' target='_blank'>
+            <a rel="noreferrer" href='https://www.linkedin.com/in/herman-vuong/' target='_blank'>
                 <LinkedIn />
             </a>
 
