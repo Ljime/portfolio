@@ -2,7 +2,7 @@ import classes from './Label.module.scss'
 
 const Label = (props) => {
     return (
-        <p className={classes.label}>{props.children}</p>
+        <p onClick={props.onClick} className={`${classes.label} ${props.className}`}>{props.children}</p>
     )
 }
 
