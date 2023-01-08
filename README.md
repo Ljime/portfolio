@@ -1,3 +1,3 @@
 # portfolio
 
-https://vuong-portfolio.herokuapp.com
+https://vuong-portfolio.netlify.app/
